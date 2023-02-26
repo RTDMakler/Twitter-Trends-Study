@@ -31,5 +31,6 @@ namespace Tweet_Trends
             string[] lines = System.IO.File.ReadAllLines(link);
             new Parser().ParseLocMes(lines, XPos, YPos, Message);
         }
+#fdgfasgdarwsgt
     }
 }
