@@ -8,6 +8,7 @@ namespace TweetTrends
         {
             var sentiments = new ReadFromFile().GetSentiments("sentiments.csv");
             var userInfo = new UserInfo("texas_tweets2014.txt");
+			#deleteline
         }
     }
 }
