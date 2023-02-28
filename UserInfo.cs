@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,6 +9,7 @@ namespace Tweet_Trends
 {
     internal class UserInfo
     {
+        float[] marks;
         private List<float> xPos;
 
         public List<float> XPos
@@ -36,6 +38,11 @@ namespace Tweet_Trends
             XPos = new List<float>();
             Message = new List<string>();
             new ReadFromFile().GetInfo(link, XPos, YPos, Message);
+        }
+        public float [] GetMarks(Dictionary<string, float> sentiments)
+        {
+            if (marks != null) return marks;
+            return new Parser().CorrelateSentMes(message, sentiments);
         }
     }
 }
