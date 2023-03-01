@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\RTD\\source\\repos\\Tweet Trends\\Tweet Trends\\Tweet Trends.csproj",
+      "projectUniqueName": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
       "projectName": "Tweet Trends",
-      "projectPath": "C:\\Users\\RTD\\source\\repos\\Tweet Trends\\Tweet Trends\\Tweet Trends.csproj",
+      "projectPath": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
       "packagesPath": "C:\\Users\\RTD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\RTD\\source\\repos\\Tweet Trends\\Tweet Trends\\obj\\",
+      "outputPath": "F:\\tex\\Twitter-Trends-Study\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\RTD\\AppData\\Roaming\\NuGet\\NuGet.Config",

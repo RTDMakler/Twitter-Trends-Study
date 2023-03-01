@@ -13,3 +13,18 @@ C:\Users\RTD\source\repos\Tweet Trends\Tweet Trends\obj\Debug\net6.0\refint\Twee
 C:\Users\RTD\source\repos\Tweet Trends\Tweet Trends\obj\Debug\net6.0\Tweet Trends.pdb
 C:\Users\RTD\source\repos\Tweet Trends\Tweet Trends\obj\Debug\net6.0\Tweet Trends.genruntimeconfig.cache
 C:\Users\RTD\source\repos\Tweet Trends\Tweet Trends\obj\Debug\net6.0\ref\Tweet Trends.dll
+F:\tex\Twitter-Trends-Study\bin\Debug\net6.0\Tweet Trends.exe
+F:\tex\Twitter-Trends-Study\bin\Debug\net6.0\Tweet Trends.deps.json
+F:\tex\Twitter-Trends-Study\bin\Debug\net6.0\Tweet Trends.runtimeconfig.json
+F:\tex\Twitter-Trends-Study\bin\Debug\net6.0\Tweet Trends.dll
+F:\tex\Twitter-Trends-Study\bin\Debug\net6.0\Tweet Trends.pdb
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.csproj.AssemblyReference.cache
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.GeneratedMSBuildEditorConfig.editorconfig
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.AssemblyInfoInputs.cache
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.AssemblyInfo.cs
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.csproj.CoreCompileInputs.cache
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.dll
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\refint\Tweet Trends.dll
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.pdb
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\Tweet Trends.genruntimeconfig.cache
+F:\tex\Twitter-Trends-Study\obj\Debug\net6.0\ref\Tweet Trends.dll
