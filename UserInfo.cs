@@ -18,7 +18,6 @@ namespace Tweet_Trends
             get { return xPos; }
             private set { xPos = value; }
         }
-#toastl
 
 
         private List<float> yPos;
