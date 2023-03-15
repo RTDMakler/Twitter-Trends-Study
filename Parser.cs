@@ -38,8 +38,8 @@ namespace Tweet_Trends
                         marks[i] += markKey * markAmount;
                     }
                 }
-                if (marks[i]!=0)
-                Console.WriteLine(marks[i]);
+                //if (marks[i]!=0)
+                //Console.WriteLine(marks[i]);
             }
             return marks;
         }

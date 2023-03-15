@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Buffers;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Tweet_Trends
 {
     internal class ReadFromFile
     {
+        private ReadOnlySequence<byte> jsonUtf8Bytes;
+
         public Dictionary<string, float> GetSentiments(string link)
         {
             return ConvertCSVToArr(link);
@@ -31,6 +35,6 @@ namespace Tweet_Trends
             string[] lines = System.IO.File.ReadAllLines(link);
             new Parser().ParseLocMes(lines, XPos, YPos, Message);
         }
-#fdgfasgdarwsgt
+        
     }
 }
