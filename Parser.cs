@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Text.Json;
+using GMap.NET.WindowsForms;
+using System.Configuration;
 
 namespace Tweet_Trends
 {
@@ -42,6 +45,45 @@ namespace Tweet_Trends
                 //Console.WriteLine(marks[i]);
             }
             return marks;
+        }
+        private List<GMap.NET.PointLatLng> GPoints(List<double> points)
+        {
+            List<GMap.NET.PointLatLng> gPoints = new List<GMap.NET.PointLatLng>();
+            for (int i=0;i<points.Count ; i+=2)
+            {
+                gPoints.Add(new GMap.NET.PointLatLng(points[i], points[i+1]));
+            }
+            return gPoints;
+        }
+        public void jsPars(List<State> states,string link = "states.json")
+        {
+            var fileText = new StreamReader(link).ReadToEnd();
+            ReadOnlySpan<byte> readOnlySpan = Encoding.UTF8.GetBytes(fileText);
+            var reader = new Utf8JsonReader(readOnlySpan);
+            List<double> points = new List<double>();
+            bool first=true;
+            while (reader.Read())
+            {
+                switch (reader.TokenType)
+                {
+                    case JsonTokenType.PropertyName:
+                        {
+                            if(!first)
+                            states[states.Count - 1].gMapPolygons.Add(new GMapPolygon(GPoints(points), states[states.Count - 1].stateName));
+                            first = false;
+                            states.Add(new State());
+                            states[states.Count - 1].stateName = reader.GetString();
+                            points = new List<double>();
+                            break; 
+                        }
+                    case JsonTokenType.Number:
+                        {
+                            float floatValue = reader.GetSingle();
+                            points.Add((double)floatValue);
+                            break;
+                        }
+                }
+            }
         }
     }
 }
