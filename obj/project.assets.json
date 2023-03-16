@@ -1330,26 +1330,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\RTD\\.nuget\\packages\\": {}
+    "C:\\Users\\256bit.by\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
+      "projectUniqueName": "D:\\Univer\\С#\\Algoritmy\\Twitter-Trends-Study3\\Tweet Trends.csproj",
       "projectName": "Tweet Trends",
-      "projectPath": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
-      "packagesPath": "C:\\Users\\RTD\\.nuget\\packages\\",
-      "outputPath": "F:\\tex\\Twitter-Trends-Study\\obj\\",
+      "projectPath": "D:\\Univer\\С#\\Algoritmy\\Twitter-Trends-Study3\\Tweet Trends.csproj",
+      "packagesPath": "C:\\Users\\256bit.by\\.nuget\\packages\\",
+      "outputPath": "D:\\Univer\\С#\\Algoritmy\\Twitter-Trends-Study3\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\RTD\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\256bit.by\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -1388,12 +1386,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.14, 6.0.14]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\256bit.by\\.dotnet\\sdk\\7.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   },

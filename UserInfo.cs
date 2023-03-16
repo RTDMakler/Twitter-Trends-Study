@@ -10,7 +10,7 @@ namespace Tweet_Trends
 {
     internal class UserInfo
     {
-        float[] marks;
+        public  float[] marks;
         private List<float> xPos;
 
         public List<float> XPos

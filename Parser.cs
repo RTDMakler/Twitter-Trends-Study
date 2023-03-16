@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Text.Json;
 using GMap.NET.WindowsForms;
 using System.Configuration;
+using GMap.NET;
 
 namespace Tweet_Trends
 {
@@ -83,6 +84,26 @@ namespace Tweet_Trends
                             break;
                         }
                 }
+            }
+        }
+
+        public void ImInsideYou(UserInfo userInfo,List<State> states)
+        {
+            for (int i = 0; i < userInfo.Message.Count; i++)
+            {
+                for (int j = 0; j < states.Count; j++)
+                {
+                    for (int k = 0; k < states[j].gMapPolygons.Count; k++)
+                    {
+                        Console.WriteLine(userInfo.YPos[0]+ " Не плачь,оно не заработает,спроси Карканигера" + (double) userInfo.XPos[0] + " спроси Карканигера");
+                        if (states[j].gMapPolygons[k].IsInside(new PointLatLng((double)userInfo.XPos[i],(double) userInfo.YPos[i])))
+                        {
+                            states[j].stateSentiment += userInfo.marks[i];
+                            Console.WriteLine(states[1].stateSentiment);
+                            Console.WriteLine("Максим гей");
+                        }
+                    }
+                }   
             }
         }
     }

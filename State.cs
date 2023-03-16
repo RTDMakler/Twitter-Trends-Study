@@ -13,6 +13,8 @@ namespace Tweet_Trends
         public List<GMapPolygon> gMapPolygons= new List<GMapPolygon>();
         public double stateSentiment;
         public string stateName;
+        
+        
 
     }
 }
