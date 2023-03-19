@@ -32,15 +32,16 @@ namespace Tweet_Trends
         }
         public void GetInfo(string link,UserInfo UsInfo)
         {
-            using (StreamReader reader = new StreamReader(link))
             {
-                string line;
-                var pars = new Parser();
-                Parallel.For(0, System.IO.File.ReadAllLines(link).Length, i =>
+                using (StreamReader reader = new StreamReader(link))
                 {
-                    line = reader.ReadLine();
-                    pars.ParseLocMes(line, UsInfo);
-                });
+                    var ps = new Parser();
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        ps.ParseLocMes(line, UsInfo);
+                    }
+                }
             }
         }
     }
