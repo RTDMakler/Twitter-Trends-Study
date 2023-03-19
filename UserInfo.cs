@@ -10,7 +10,7 @@ namespace Tweet_Trends
 {
     internal class UserInfo
     {
-        float[] marks;
+        public float[] marks;
         private List<float> xPos;
 
         public List<float> XPos
@@ -39,12 +39,16 @@ namespace Tweet_Trends
             YPos = new List<float>();
             XPos = new List<float>();
             Message = new List<string>();
-            new ReadFromFile().GetInfo(link, XPos, YPos, Message);
+            new ReadFromFile().GetInfo(link, this);
+            marks= new float[Message.Count];
         }
-        public float [] GetMarks(Dictionary<string, float> sentiments)
+        public void FillTweet(float x, float y,string mes)
         {
-            if (marks != null) return marks;
-            return new Parser().CorrelateSentMes(message, sentiments);
+            XPos.Add(x); YPos.Add(y); Message.Add(mes);
+        }
+        public void FillMarks(Dictionary<string, float> sentiments)
+        {
+            new Parser().CorrelateSentMes(message, sentiments, this);
         }
     }
 }

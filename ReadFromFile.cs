@@ -30,11 +30,18 @@ namespace Tweet_Trends
             }
             return dict;
         }
-        public void GetInfo(string link,List<float> XPos,List<float> YPos,List<string> Message)
+        public void GetInfo(string link,UserInfo UsInfo)
         {
-            string[] lines = System.IO.File.ReadAllLines(link);
-            new Parser().ParseLocMes(lines, XPos, YPos, Message);
+            using (StreamReader reader = new StreamReader(link))
+            {
+                string line;
+                var pars = new Parser();
+                Parallel.For(0, System.IO.File.ReadAllLines(link).Length, i =>
+                {
+                    line = reader.ReadLine();
+                    pars.ParseLocMes(line, UsInfo);
+                });
+            }
         }
-        
     }
 }

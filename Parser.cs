@@ -7,44 +7,53 @@ using System.Text.RegularExpressions;
 using System.Text.Json;
 using GMap.NET.WindowsForms;
 using System.Configuration;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Tweet_Trends
 {
     internal class Parser
     {
-        public void ParseLocMes(string[] lines,List<float> XPos, List<float> YPos, List<string> Message)
+        public void ParseLocMes(string line,UserInfo UsInfo)
         {
-            for(int i=0;i<lines.Length;i++) 
+            try
             {
-                var curString = lines[i];
-                XPos.Add(GetXPos(curString));
-                YPos.Add(GetYPos(curString));
-                Message.Add(GetMes(curString));
-
+                UsInfo.FillTweet(GetXPos(line), GetYPos(line), GetMes(line));
+            }
+            catch
+            {
+                Console.WriteLine("Tweet Error");
             }
         }
         float GetXPos(string line) => Convert.ToSingle(line.Split(' ')[0].Replace("[", "").Replace(",", "")); 
         float GetYPos(string line) => Convert.ToSingle(((line.Split(' ')[1]).Split('\t')[0]).Replace("]", "").Trim()); 
-        string GetMes(string line) => Convert.ToString(line.Split("\t")[3]);
-        public float[] CorrelateSentMes(List<string> message,Dictionary<string, float> sentiments)
+        string GetMes(string line) => Convert.ToString(line.Split("\t")[3]).ToLower();
+        public void CorrelateSentMes(List<string> message,Dictionary<string, float> sentiments, UserInfo UsIn)
         {
-            float[] marks = new float[message.Count];
-            for(int i=0;i<message.Count ; i++) 
+
+            var sv = new Stopwatch();
+            sv.Start();
+            Parallel.For(0, message.Count, i =>
             {
                 foreach (string sentiment in sentiments.Keys)
                 {
 
-                    int markAmount = Regex.Matches(message[i], sentiment).Count;
-                    if (markAmount != 0)
+                    //int markAmount = Regex.Matches(message[i], sentiment).Count;
+                    int markAmount;
+                    if (sentiment.Length > 3)
+                        markAmount = message[i].Split(sentiment + " ").Length + message[i].Split(" " + sentiment + " ").Length
+                        + message[i].Split(" " + sentiment + "\n").Length - 3;
+                    else markAmount = message[i].Split(" " + sentiment + " ").Length - 1;
+                    if (markAmount > 0)
                     {
+                        //Console.WriteLine(message[i] + " " + sentiment);
                         sentiments.TryGetValue(sentiment, out float markKey);
-                        marks[i] += markKey * markAmount;
+                        UsIn.marks[i] += markKey * markAmount;
                     }
                 }
-                //if (marks[i]!=0)
-                //Console.WriteLine(marks[i]);
-            }
-            return marks;
+            });
+            sv.Stop();
+            Console.WriteLine(sv.Elapsed);
         }
         private List<GMap.NET.PointLatLng> GPoints(List<double> points)
         {

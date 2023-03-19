@@ -6,20 +6,27 @@ namespace TweetTrends
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
 
-            //var sv = new Stopwatch();
+            var sv = new Stopwatch();
+            sv.Start();
             var states = new List<State>();
+            sv.Stop();
+
             new Parser().jsPars(states ,"states.json");
-            //sv.Start();
+       
             var sentiments = new ReadFromFile().GetSentiments("sentiments.csv");
+        
             var userInfo = new UserInfo("tweets20111.txt");
-            float [] marks =userInfo.GetMarks(sentiments);
+            
+            userInfo.FillMarks(sentiments);
+            //Console.WriteLine(userInfo.Message[120] + userInfo.marks[120]);
+
             //foreach(var mark in marks)
             //    Console.WriteLine(mark);; ; ; ; ; ; ; ;
-            //sv.Stop();
-            //Console.WriteLine(sv.Elapsed);
+
         }
     }
 }
