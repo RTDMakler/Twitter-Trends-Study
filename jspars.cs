@@ -15,8 +15,6 @@ namespace Tweet_Trends
     internal class jspars
     {
         List <GMapPolygon> gMapPolygons= new List <GMapPolygon> ();
-        List <PointLatLng> pointLatLngs= new List <PointLatLng> ();
-
-        
+        List <PointLatLng> pointLatLngs= new List <PointLatLng> (); 
     }   
 }

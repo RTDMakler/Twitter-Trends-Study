@@ -8,17 +8,18 @@ namespace TweetTrends
     {
         static void Main(string[] args)
         {
-
             //var sv = new Stopwatch();
-            var states = new List<State>();
-            new Parser().jsPars(states ,"states.json");
             //sv.Start();
-            var sentiments = new ReadFromFile().GetSentiments("sentiments.csv");
-            var userInfo = new UserInfo("tweets20111.txt");
-            float [] marks =userInfo.GetMarks(sentiments);
-            //foreach(var mark in marks)
-            //    Console.WriteLine(mark);; ; ; ; ; ; ; ;
+            var states = new List<State>(); 
+            
+            new Parser().jsPars(states ,"states.json"); Console.WriteLine("Created array of states");
             //sv.Stop();
+            var sentiments = new ReadFromFile().GetSentiments("sentiments.csv"); Console.WriteLine("Got sentiments");
+
+            var userInfo = new UserInfo("tweets20111.txt"); Console.WriteLine("Got UserInfo");
+
+            userInfo.FillMarks(sentiments); Console.WriteLine("Filled markes");
+           
             //Console.WriteLine(sv.Elapsed);
         }
     }
