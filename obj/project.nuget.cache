@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "XvrzINOKH5l1IJSlyTRyeU7Rs9nGVMC4laIITpEMAk66xcRwfdsHMTk+4d4GFztFs22PCK6ginIdAU8TZw13ZA==",
+  "dgSpecHash": "6qzq9cif2a9ryAiss9SBujS9lD+qB90G3nX01AZI2llWhsUlp/QG6kHHPYDK0hz7fSHkqAB/+uqxwJ4epOsT2A==",
   "success": true,
-  "projectFilePath": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
+  "projectFilePath": "F:\\tex\\GMap\\GMap.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RTD\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\RTD\\.nuget\\packages\\gmap.net.core\\2.1.7\\gmap.net.core.2.1.7.nupkg.sha512",
+    "C:\\Users\\RTD\\.nuget\\packages\\gmap.net.windows\\2.0.1\\gmap.net.windows.2.0.1.nupkg.sha512",
     "C:\\Users\\RTD\\.nuget\\packages\\gmap.net.windowsforms\\1.7.5\\gmap.net.windowsforms.1.7.5.nupkg.sha512",
+    "C:\\Users\\RTD\\.nuget\\packages\\gmap.net.winforms\\2.1.7\\gmap.net.winforms.2.1.7.nupkg.sha512",
+    "C:\\Users\\RTD\\.nuget\\packages\\gmap.net.winpresentation\\2.0.1\\gmap.net.winpresentation.2.0.1.nupkg.sha512",
     "C:\\Users\\RTD\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\RTD\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\RTD\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
@@ -36,10 +39,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Пакет \"GMap.NET.WindowsForms 1.7.5\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "message": "Пакет \"GMap.NET.WindowsForms 1.7.5\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "GMap.NET.WindowsForms",
       "targetGraphs": [
-        "net6.0"
+        "net6.0-windows7.0"
       ]
     }
   ]

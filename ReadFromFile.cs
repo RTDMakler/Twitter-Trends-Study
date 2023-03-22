@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Tweet_Trends
+namespace GMap
 {
     internal class ReadFromFile
     {
