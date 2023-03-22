@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {
+    "net6.0-windows7.0": {
       "EntityFramework/6.4.4": {
         "type": "package",
         "dependencies": {
@@ -51,6 +51,18 @@
           }
         }
       },
+      "GMap.NET.Windows/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "GMap.NET.Core": "2.0.1",
+          "GMap.NET.WinForms": "2.0.1",
+          "GMap.NET.WinPresentation": "2.0.1"
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF",
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
       "GMap.NET.WindowsForms/1.7.5": {
         "type": "package",
         "compile": {
@@ -61,6 +73,40 @@
           "lib/net40/GMap.NET.Core.dll": {},
           "lib/net40/GMap.NET.WindowsForms.dll": {}
         }
+      },
+      "GMap.NET.WinForms/2.1.7": {
+        "type": "package",
+        "dependencies": {
+          "GMap.NET.Core": "2.1.7"
+        },
+        "compile": {
+          "lib/net6.0-windows7.0/GMap.NET.WindowsForms.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        },
+        "runtime": {
+          "lib/net6.0-windows7.0/GMap.NET.WindowsForms.dll": {
+            "related": ".runtimeconfig.json"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      },
+      "GMap.NET.WinPresentation/2.0.1": {
+        "type": "package",
+        "dependencies": {
+          "GMap.NET.Core": "2.0.1"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/GMap.NET.WindowsPresentation.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/GMap.NET.WindowsPresentation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WPF"
+        ]
       },
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
@@ -521,6 +567,18 @@
         "lib/netstandard2.1/GMap.NET.Core.dll"
       ]
     },
+    "GMap.NET.Windows/2.0.1": {
+      "sha512": "+iWnnK7iE32vGW1V28WZCXJAlrmHr4D1/aO0ghqyhPrlCVQniO1r31+qKZFwE6MRXlpE/C/G0b9Ru0JlINE6JQ==",
+      "type": "package",
+      "path": "gmap.net.windows/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gmap.net.windows.2.0.1.nupkg.sha512",
+        "gmap.net.windows.nuspec",
+        "lib/readme.txt"
+      ]
+    },
     "GMap.NET.WindowsForms/1.7.5": {
       "sha512": "VA2836bCMgIAhcvpQIJpmDJrQFm+nnH8AiqKzGqvMAoamO+UqAoNy6b+YPKNAqS1+2RRAcq12nrC582tUcb90A==",
       "type": "package",
@@ -534,6 +592,45 @@
         "lib/net20/GMap.NET.WindowsForms.dll",
         "lib/net40/GMap.NET.Core.dll",
         "lib/net40/GMap.NET.WindowsForms.dll"
+      ]
+    },
+    "GMap.NET.WinForms/2.1.7": {
+      "sha512": "xc3t2It++kueFr6p/A8OanQ7EWSCz4udrVMew1+6El7ObKqgjhHR4j0w6gNWMehbajp8ZoR4ADZbDajytnpu3Q==",
+      "type": "package",
+      "path": "gmap.net.winforms/2.1.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gmap.net.winforms.2.1.7.nupkg.sha512",
+        "gmap.net.winforms.nuspec",
+        "lib/net46/GMap.NET.WindowsForms.dll",
+        "lib/net461/GMap.NET.WindowsForms.dll",
+        "lib/net462/GMap.NET.WindowsForms.dll",
+        "lib/net47/GMap.NET.WindowsForms.dll",
+        "lib/net471/GMap.NET.WindowsForms.dll",
+        "lib/net472/GMap.NET.WindowsForms.dll",
+        "lib/net48/GMap.NET.WindowsForms.dll",
+        "lib/net5.0-windows7.0/GMap.NET.WindowsForms.dll",
+        "lib/net5.0-windows7.0/GMap.NET.WindowsForms.runtimeconfig.json",
+        "lib/net6.0-windows7.0/GMap.NET.WindowsForms.dll",
+        "lib/net6.0-windows7.0/GMap.NET.WindowsForms.runtimeconfig.json",
+        "lib/netcoreapp3.0/GMap.NET.WindowsForms.dll",
+        "lib/netcoreapp3.0/GMap.NET.WindowsForms.runtimeconfig.json",
+        "lib/netcoreapp3.1/GMap.NET.WindowsForms.dll",
+        "lib/netcoreapp3.1/GMap.NET.WindowsForms.runtimeconfig.json"
+      ]
+    },
+    "GMap.NET.WinPresentation/2.0.1": {
+      "sha512": "TTg1Yjq0OEVmlL4bqHDSa+vLEI1nVhXML6p8HM+Z/xD3poPihiZRBhckVP3uUbWnQr6mbbh4q1SQTX60u/+Hqg==",
+      "type": "package",
+      "path": "gmap.net.winpresentation/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "gmap.net.winpresentation.2.0.1.nupkg.sha512",
+        "gmap.net.winpresentation.nuspec",
+        "lib/net40/GMap.NET.WindowsPresentation.dll",
+        "lib/netcoreapp3.0/GMap.NET.WindowsPresentation.dll"
       ]
     },
     "Microsoft.CSharp/4.7.0": {
@@ -1324,8 +1421,10 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net6.0": [
+    "net6.0-windows7.0": [
       "GMap.NET.Core >= 2.1.7",
+      "GMap.NET.WinForms >= 2.1.7",
+      "GMap.NET.Windows >= 2.0.1",
       "GMap.NET.WindowsForms >= 1.7.5"
     ]
   },
@@ -1335,26 +1434,26 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
-      "projectName": "Tweet Trends",
-      "projectPath": "F:\\tex\\Twitter-Trends-Study\\Tweet Trends.csproj",
+      "projectUniqueName": "F:\\tex\\GMap\\GMap.csproj",
+      "projectName": "GMap",
+      "projectPath": "F:\\tex\\GMap\\GMap.csproj",
       "packagesPath": "C:\\Users\\RTD\\.nuget\\packages\\",
-      "outputPath": "F:\\tex\\Twitter-Trends-Study\\obj\\",
+      "outputPath": "F:\\tex\\GMap\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\RTD\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net6.0-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
           "projectReferences": {}
         }
       },
@@ -1365,12 +1464,20 @@
       }
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
         "dependencies": {
           "GMap.NET.Core": {
             "target": "Package",
             "version": "[2.1.7, )"
+          },
+          "GMap.NET.WinForms": {
+            "target": "Package",
+            "version": "[2.1.7, )"
+          },
+          "GMap.NET.Windows": {
+            "target": "Package",
+            "version": "[2.0.1, )"
           },
           "GMap.NET.WindowsForms": {
             "target": "Package",
@@ -1391,6 +1498,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
@@ -1402,10 +1512,10 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Пакет \"GMap.NET.WindowsForms 1.7.5\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
+      "message": "Пакет \"GMap.NET.WindowsForms 1.7.5\" был восстановлен с помощью \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1\", а не целевой платформы проекта \"net6.0-windows7.0\". Этот пакет может быть не полностью совместим с вашим проектом.",
       "libraryId": "GMap.NET.WindowsForms",
       "targetGraphs": [
-        "net6.0"
+        "net6.0-windows7.0"
       ]
     }
   ]

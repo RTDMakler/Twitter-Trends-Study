@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tweet_Trends
+namespace GMap
 {
     internal class State
     {

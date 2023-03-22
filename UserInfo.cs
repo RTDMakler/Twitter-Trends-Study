@@ -6,7 +6,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tweet_Trends
+namespace GMap
 {
     internal class UserInfo
     {
@@ -18,7 +18,6 @@ namespace Tweet_Trends
             get { return xPos; }
             private set { xPos = value; }
         }
-
 
         private List<float> yPos;
 
